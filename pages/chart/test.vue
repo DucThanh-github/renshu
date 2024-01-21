@@ -53,7 +53,7 @@ const data = ref({
     {
       label: "Data One",
       backgroundColor: "blue",
-      data: [3000, 7100, 6000, 20000, 33000],
+      data: [3000000, 710000, 600000, 2000000, 3300000],
     },
   ],
 });
@@ -96,6 +96,9 @@ const options = ref({
   plugins: {
     datalabels: {
       color: "white",
+      anchor: "end",
+      align: "bottom",
+    //   offset: 0,
       formatter: function (value, context) {
         console.log("value", value);
         if (value < 1000) {
