@@ -14,12 +14,12 @@
           <v-col cols="8">
             <v-select
               :items="listCustomerType"
-              item-title="text"
-              item-value="value"
+              item-title="value"
+              item-value="text"
               placeholder="Please select"
               variant="outlined"
               hide-details="true"
-              v-model="customerType"
+              :model-value="customerType"
             >
             </v-select>
           </v-col>

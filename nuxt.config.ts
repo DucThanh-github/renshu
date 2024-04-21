@@ -8,7 +8,9 @@ export default defineNuxtConfig({
   //...
   build: {
     transpile: ['vuetify'],
+    
   },
+  css: ["~/assets/style/main.css","~/assets/style/main.global.css"],
   modules: [
     '@pinia/nuxt',
     (_options, nuxt) => {
@@ -19,6 +21,12 @@ export default defineNuxtConfig({
     },
     //...
   ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   vite: {
     vue: {
       template: {

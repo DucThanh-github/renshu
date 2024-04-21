@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "key": "2024-01-26T00:00:00.063Z",
+      "label": null,
+      "data_points": [
+        {
+          "key": "total",
+          "label": "Total",
+          "value": 67899008
+        },
+        { "key": "001", "label": "Siknakarin", "value": 21422223 },
+        { "key": "002", "label": "Chiang Mai", "value": 41422223 }
+      ]
+    }
+  ]
+}
