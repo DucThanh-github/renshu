@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/style/main.css","~/assets/style/main.global.css"],
   modules: [
+    "nuxt-lodash",
     '@pinia/nuxt',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -21,6 +22,17 @@ export default defineNuxtConfig({
     },
     //...
   ],
+  lodash: {
+    prefix: "_",
+    prefixSkip: ["string"],
+    upperAfterPrefix: false,
+    exclude: ["map"],
+    alias: [
+      ["camelCase", "stringToCamelCase"], // => stringToCamelCase
+      ["kebabCase", "stringToKebab"], // => stringToKebab
+      ["isDate", "isLodashDate"], // => _isLodashDate
+    ],
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
